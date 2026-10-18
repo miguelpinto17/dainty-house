@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dainty House · Ovar, Portugal</title>
+<meta name="description" content="Dainty House is a modern private house in the heart of Ovar, Portugal, with its own garden and optional jacuzzi. See the photos and book on Airbnb or Booking.com.">
+<meta property="og:title" content="Dainty House · Ovar, Portugal">
+<meta property="og:description" content="A modern private house with its own garden and optional jacuzzi, in the heart of Ovar.">
+<meta property="og:type" content="website">
+<!-- og:image needs an absolute URL once hosted, e.g. https://yourdomain.com/assets/photos/01.jpg -->
+<meta name="theme-color" content="#f4efe6">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#f4efe6; --foam:#fbf9f4; --sea:#d5e3dd; --sea-2:#b9d0c7; --teal:#1f3f3c; --teal-2:#2d5753; --clay:#b8805a; --ink:#1c2b2a; --soft:rgba(28,43,42,.68); --line:rgba(31,63,60,.16);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px); --wrap:min(1180px,100% - 2*var(--pad));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sand);color:var(--ink);font:300 1.0625rem/1.75 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.02;letter-spacing:-.01em}
+section{scroll-margin-top:70px}
+.wrap{width:var(--wrap);margin-inline:auto}
+.eyebrow{font:500 .7rem/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--clay);display:block}
+.h2{font-size:clamp(2.4rem,5.4vw,4.4rem);font-weight:300}
+.h2 em{font-style:italic;color:var(--teal-2)}
+.center{text-align:center}
+.lede{font:300 clamp(1.3rem,2.4vw,1.85rem)/1.5 var(--serif);color:var(--teal)}
+.sub{color:var(--soft);max-width:50ch}
+.center .sub{margin-inline:auto}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 1.9rem;border-radius:999px;font:500 .78rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--teal);transition:background .3s,color .3s,border-color .3s}
+.btn .dh-ic{width:1em;height:1em}
+.btn-solid{background:var(--teal);color:var(--foam)}
+.btn-solid:hover{background:var(--clay);border-color:var(--clay)}
+.btn-ghost{color:var(--teal)}
+.btn-ghost:hover{background:var(--teal);color:var(--foam)}
+.light .btn-solid{background:var(--foam);color:var(--teal);border-color:var(--foam)}
+.light .btn-solid:hover{background:var(--clay);border-color:var(--clay);color:#fff}
+.light .btn-ghost{color:var(--foam);border-color:rgba(251,249,244,.7)}
+.light .btn-ghost:hover{background:var(--foam);color:var(--teal)}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;padding:1.3rem 0;transition:background .4s,padding .4s,color .4s;color:var(--foam)}
+.is-scrolled .hdr{background:rgba(244,239,230,.94);backdrop-filter:blur(10px);padding:.7rem 0;color:var(--teal);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:1.4rem}
+.logo{font:400 1.7rem/1 var(--serif);text-decoration:none;margin-right:auto;letter-spacing:.02em}
+.logo b{font-weight:500;font-style:italic}
+.nav{display:flex;gap:1.9rem}
+.nav a{font:400 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;opacity:.9;padding:.4rem 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .3s}
+.nav a:hover::after{width:100%}
+.lang{display:flex;gap:.2rem}
+.lang button{border:0;background:none;color:inherit;font:500 .7rem/1 var(--sans);letter-spacing:.18em;padding:.4rem .5rem;opacity:.6;cursor:pointer;border-radius:99px}
+.lang button.is-active{opacity:1;box-shadow:inset 0 -1px 0 currentColor;border-radius:0}
+.hdr .btn{padding:.75rem 1.3rem;font-size:.68rem;border-color:currentColor;color:inherit;background:none}
+.hdr .btn:hover{background:var(--clay);border-color:var(--clay);color:#fff}
+.burger{display:none;border:1px solid currentColor;background:none;color:inherit;width:2.6rem;height:2.6rem;border-radius:50%;place-items:center}
+@media(max-width:1060px){
+  .nav,.hdr .btn.b2{display:none}.burger{display:grid}
+  .nav-open .hdr{background:var(--sand);color:var(--teal)}
+  .nav-open .nav{display:flex;position:fixed;inset:0;background:var(--sand);color:var(--teal);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;z-index:-1}
+  .nav-open .nav a{font:300 2.3rem/1 var(--serif);letter-spacing:0;text-transform:none}
+}
+@media(max-width:600px){.hdr .btn.b1{display:none}}
+
+.nav-open .hdr,.nav-open .hdr .bar{backdrop-filter:none;-webkit-backdrop-filter:none}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--foam);overflow:hidden;isolation:isolate}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 62%;z-index:-2;transform:scale(1.08);animation:drift 16s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,40,38,.6) 0,rgba(18,40,38,.38) 40%,rgba(18,40,38,.45) 70%,rgba(18,40,38,.82) 100%)}
+.hero .in{padding:7rem 0 8rem;max-width:880px}
+.hero .eyebrow{color:var(--foam);margin-bottom:1.6rem;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero h1{font-size:clamp(4rem,12vw,10rem);font-weight:300;line-height:.9;margin-bottom:1.6rem}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero p.lead{font:300 clamp(1.2rem,2.2vw,1.6rem)/1.5 var(--serif);max-width:34ch;margin:0 auto 2.2rem;opacity:.95}
+.hero .ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.hero .micro{margin-top:1.3rem;font-size:.8rem;letter-spacing:.04em;opacity:.8}
+.hero .ld{opacity:0;translate:0 24px;animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*.14s + .2s)}
+@keyframes rise{to{opacity:1;translate:0}}
+.scroll{position:absolute;bottom:1.6rem;left:50%;translate:-50% 0;font:400 .62rem/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.8rem;opacity:.85}
+.scroll::after{content:"";width:1px;height:44px;background:linear-gradient(var(--foam),transparent);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scaleY(.4);transform-origin:top}}
+
+/* reviews */
+.reviews{background:var(--sea);padding:clamp(4rem,9vw,7.5rem) 0;position:relative}
+.reviews::before{content:"";position:absolute;top:-1px;left:0;right:0;height:40px;background:var(--sand);clip-path:ellipse(60% 100% at 50% 0)}
+.reviews .wrap>header{margin-bottom:2.8rem}
+.reviews .h2{margin:1.1rem 0 .9rem}
+.score-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:1.8rem 4rem;margin-bottom:3rem}
+.scores{display:flex;gap:1.6rem 3rem;flex-wrap:wrap;justify-content:center}
+.src{font:500 .64rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:.5rem}
+.cats-wrap .src{text-align:center;margin-bottom:.8rem}
+.score{display:flex;align-items:center;gap:1.1rem}
+.score .big{font:300 4.8rem/1 var(--serif);color:var(--teal)}
+.score .meta{text-align:left;line-height:1.35}
+.stars{display:flex;gap:.1rem;color:var(--clay)}
+.stars .dh-ic{fill:var(--clay);width:1rem;height:1rem}
+.score .meta small{font-size:.82rem;color:var(--soft)}
+.cats{display:grid;grid-template-columns:repeat(2,auto);gap:.4rem 2.4rem;justify-content:center}
+.cats ul{display:contents}
+.dh-cat{display:flex;gap:.8rem;justify-content:space-between;align-items:baseline;font-size:.86rem;min-width:11rem;border-bottom:1px solid rgba(31,63,60,.2);padding:.2rem 0}
+.dh-cat-bar{display:none}
+.dh-cat-val{font:500 1.15rem/1 var(--serif);color:var(--teal)}
+.rv-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.dh-review{background:var(--foam);border-radius:4px;padding:1.8rem 1.7rem;display:flex;flex-direction:column;gap:1rem;box-shadow:0 1px 0 rgba(31,63,60,.08)}
+.dh-rv-head{display:flex;align-items:center;gap:.6rem;justify-content:space-between}
+.dh-rv-platform{font:500 .66rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--teal-2)}
+.dh-rv-flag{font:500 .58rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;background:#f1dcc6;color:#6b4325;border-radius:99px;padding:.3rem .55rem}
+.dh-rv-title{font:500 .98rem/1.35 var(--sans);color:var(--teal);margin:0}
+.dh-rv-tr{font-size:.72rem;color:var(--soft);margin-top:.35rem}
+.dh-rv-text{margin:0;flex:1}
+.dh-rv-text p{margin:0;font:400 1.3rem/1.45 var(--serif);color:var(--ink)}
+.dh-rv-foot{display:flex;flex-direction:column;font-size:.8rem;color:var(--soft);border-top:1px solid var(--line);padding-top:.8rem}
+.dh-rv-foot b{font-weight:500;color:var(--ink)}
+.mentions{margin-top:2.6rem;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.8rem 1.1rem}
+.mentions h3{font:500 .68rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--soft)}
+.mentions ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.dh-mention{border:1px solid rgba(31,63,60,.3);border-radius:99px;padding:.4rem .95rem;font-size:.84rem;display:inline-flex;gap:.5rem}
+.dh-mention b{font-weight:500;color:var(--clay)}
+@media(max-width:980px){.rv-list{grid-template-columns:repeat(6,minmax(280px,82%));overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}.dh-review{scroll-snap-align:start}.cats{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.dh-cat{min-width:0}}
+@media(max-width:520px){.cats{grid-template-columns:minmax(0,1fr);max-width:340px;margin-inline:auto}.score-row{gap:1.4rem}}
+
+/* gallery */
+.gallery{padding:clamp(4rem,9vw,7.5rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+.gallery header{margin-bottom:2.8rem}
+.gallery .h2{margin:1.1rem 0 .9rem}
+.gallery [data-carousel]{--dh-snap:center;--h:clamp(280px,46vw,660px);width:100%}
+.gallery .dh-track{gap:clamp(.6rem,1.4vw,1.2rem);padding-inline:calc(50% - var(--h)*.75)}
+.gallery .dh-slide{height:var(--h);aspect-ratio:3/2;overflow:hidden;border-radius:3px;opacity:.5;transition:opacity .6s}
+.gallery .dh-slide[data-ratio="portrait"]{aspect-ratio:3/4}
+.gallery .dh-slide.is-current{opacity:1}
+.gallery .dh-controls{display:contents}
+.gallery .dh-prev,.gallery .dh-next{position:absolute;top:calc(var(--h)/2 - 1.6rem);width:3.2rem;height:3.2rem;border-radius:50%;border:0;background:rgba(251,249,244,.92);color:var(--teal);display:grid;place-items:center;box-shadow:0 8px 24px rgba(20,40,38,.25);z-index:3;transition:transform .3s,background .3s}
+.gallery .dh-prev{left:clamp(.6rem,4vw,4rem)}.gallery .dh-next{right:clamp(.6rem,4vw,4rem)}
+.gallery .dh-prev:hover:not(:disabled),.gallery .dh-next:hover:not(:disabled){background:var(--clay);color:#fff;transform:scale(1.06)}
+.gallery .dh-count{text-align:center;margin-top:1.5rem;font:300 1.4rem/1 var(--serif);color:var(--teal);letter-spacing:.08em}
+.gallery .dh-dots{margin-top:.9rem;color:var(--teal)}
+@media(max-width:700px){.gallery .dh-track{padding-inline:6vw}.gallery [data-carousel]{--h:clamp(240px,66vw,380px)}.gallery .dh-prev,.gallery .dh-next{top:auto;bottom:-.2rem;display:none}}
+
+/* house */
+.house{padding:clamp(3rem,6vw,5rem) 0 clamp(4rem,9vw,8rem)}
+.house .intro{max-width:760px;margin:0 auto;text-align:center}
+.house .h2{margin:1.1rem 0 1.8rem}
+.facts{list-style:none;margin:3rem auto;padding:1.6rem 0;display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem 2.6rem;border-block:1px solid var(--line);max-width:960px}
+.facts li{display:flex;align-items:center;gap:.7rem;font-size:.92rem}
+.facts .dh-ic{color:var(--clay);width:1.4rem;height:1.4rem}
+.house-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.house-grid figure{margin:0;overflow:hidden;border-radius:3px}
+.house-grid img{display:block;width:100%;height:100%;object-fit:cover}
+.house-grid .tall{aspect-ratio:3/4}
+.house-grid .txt p{margin:0 0 1.2rem;max-width:58ch}
+.house-grid .txt .quote{font:italic 300 1.9rem/1.25 var(--serif);color:var(--clay);margin-top:1.8rem}
+.rate.layout{border-left-color:var(--teal);color:var(--ink);font-weight:400;background:var(--sea)}
+.rate{background:var(--foam);border-radius:4px;padding:1.2rem 1.4rem;font-size:.92rem;color:var(--soft);margin-top:1.6rem;border-left:2px solid var(--clay)}
+@media(max-width:900px){.house-grid{grid-template-columns:1fr}.house-grid .tall{aspect-ratio:4/3}}
+
+/* amenities */
+.amen{background:var(--foam);padding:clamp(4rem,9vw,7.5rem) 0;border-block:1px solid var(--line)}
+.amen header{margin-bottom:3.4rem}
+.amen .h2{margin:1.1rem 0 .9rem}
+.am-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem clamp(2rem,5vw,5rem)}
+.am-group-title{font:400 1.7rem/1.1 var(--serif);color:var(--teal);margin-bottom:1rem;font-style:italic}
+.am-list{list-style:none;margin:0;padding:0}
+.am-item{display:flex;align-items:center;gap:.85rem;padding:.5rem 0;font-size:.95rem}
+.am-item .dh-ic{color:var(--clay);width:1.2rem;height:1.2rem}
+.am-tag{margin-left:auto;font:500 .58rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;font-style:normal;background:var(--sea);color:var(--teal);border-radius:99px;padding:.32rem .55rem}
+@media(max-width:900px){.am-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.am-grid{grid-template-columns:1fr}}
+
+/* spa */
+.spa{position:relative;min-height:80vh;display:grid;align-items:center;color:var(--foam);isolation:isolate;overflow:hidden}
+.spa .bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.spa::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(18,40,38,.88) 0,rgba(18,40,38,.55) 55%,rgba(18,40,38,.15) 100%)}
+.spa .in{max-width:540px;padding:5rem 0}
+.spa .eyebrow{color:#e9d3bf;margin-bottom:1.2rem}
+.spa .h2 em{color:#e9d3bf}
+.spa p{margin:1.4rem 0;color:rgba(251,249,244,.9)}
+.spa .tags{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0}
+.spa .tag{border:1px solid rgba(251,249,244,.5);border-radius:99px;padding:.5rem 1rem;font-size:.84rem;display:inline-flex;gap:.5rem;align-items:center}
+.spa .tag.price{background:var(--foam);color:var(--teal);border-color:var(--foam);font-weight:500}
+.spa small{opacity:.75}
+@media(max-width:760px){.spa::after{background:rgba(18,40,38,.72)}}
+
+/* location */
+.loc{padding:clamp(4rem,9vw,7.5rem) 0}
+.loc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.loc .h2{margin:1.1rem 0 .9rem}
+.places{list-style:none;padding:0;margin:2rem 0 0}
+.places li{display:flex;justify-content:space-between;gap:1rem;padding:.95rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.places b{font:400 1.45rem/1.1 var(--serif);color:var(--teal)}
+.places span{font-size:.86rem;color:var(--soft)}
+.map{position:relative;aspect-ratio:5/4;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(31,63,60,.4)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-note{font-size:.8rem;color:var(--soft);margin:.8rem 0 0;text-align:center}
+@media(max-width:860px){.loc .wrap{grid-template-columns:1fr}.map{max-width:480px;margin-inline:auto;width:100%}}
+
+/* end */
+.end{background:var(--teal);color:var(--foam);text-align:center;padding:clamp(4.5rem,10vw,8rem) 0;position:relative;overflow:hidden}
+.end::before{content:"";position:absolute;left:50%;top:-40%;width:90vmin;height:90vmin;translate:-50% 0;border-radius:50%;background:radial-gradient(circle,rgba(185,208,199,.22),transparent 65%)}
+.end .h2{margin:1.1rem auto 1.1rem;max-width:14ch;font-size:clamp(2.6rem,6.5vw,5.4rem)}
+.end .h2 em{color:#e9d3bf}
+.end .eyebrow{color:#e9d3bf}
+.end p{max-width:44ch;margin:0 auto 2.2rem;color:rgba(251,249,244,.85)}
+.end .ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;position:relative}
+
+/* footer */
+.ftr{background:var(--ink);color:rgba(251,249,244,.7);padding:2.2rem 0;font-size:.82rem}
+.ftr .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.4rem;align-items:center;justify-content:space-between}
+.ftr .logo{color:var(--foam);font-size:1.4rem;margin:0}
+.ftr p{margin:0}
+.ftr .lang button{color:var(--foam)}
+.ftr .top{color:var(--foam);text-decoration:none;font:500 .66rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid var(--clay);padding-bottom:.3rem}
+
+/* reveal */
+.js [data-reveal]{opacity:0;translate:0 30px;transition:opacity 1.1s cubic-bezier(.2,.7,.2,1) calc(var(--d,0)*1ms),translate 1.1s cubic-bezier(.2,.7,.2,1) calc(var(--d,0)*1ms)}
+.js [data-reveal].is-in{opacity:1;translate:0}
+@media(prefers-reduced-motion:reduce){.hero img.bg{animation:none;transform:none}.hero .ld{animation:none;opacity:1;translate:0}.js [data-reveal]{opacity:1;translate:0;transition:none}.scroll::after{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top">Dainty <b>House</b></a>
+    <nav class="nav" data-nav aria-label="Primary">
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#house" data-i18n="nav.house">The house</a>
+      <a href="#amenities" data-i18n="nav.amenities">Amenities</a>
+      <a href="#location" data-i18n="nav.location">Location</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang-set="en">EN</button><button type="button" data-lang-set="pt">PT</button></div>
+    <a class="btn b2" href="https://www.booking.com/hotel/pt/dainty-house-ovar.pt-pt.html" target="_blank" rel="noopener">Booking.com</a>
+    <a class="btn b1" href="https://www.airbnb.pt/rooms/888126764161156334" target="_blank" rel="noopener">Airbnb</a>
+    <button class="burger" type="button" data-nav-toggle aria-expanded="false" data-i18n-attr="aria-label:nav.menu" aria-label="Menu"><i data-icon="menu"></i></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero light">
+    <img class="bg" data-photo="01" src="assets/photos/01.jpg" alt="Private garden with jacuzzi, slate stone wall and timber pergola" fetchpriority="high">
+    <div class="wrap">
+      <div class="in" style="margin-inline:auto">
+        <span class="eyebrow ld" style="--i:0" data-i18n="hero.kicker">Entire home · Ovar, Portugal</span>
+        <h1 class="ld" style="--i:1">Dainty <em>House</em></h1>
+        <p class="lead ld" style="--i:2" data-i18n="hero.sub">A modern private house with its own garden and optional jacuzzi, in the heart of Ovar.</p>
+        <div class="ctas ld" style="--i:3">
+          <a class="btn btn-solid" href="https://www.airbnb.pt/rooms/888126764161156334" target="_blank" rel="noopener"><span data-i18n="cta.airbnb">Book on Airbnb</span><i data-icon="arrowUR"></i></a>
+          <a class="btn btn-ghost" href="https://www.booking.com/hotel/pt/dainty-house-ovar.pt-pt.html" target="_blank" rel="noopener"><span data-i18n="cta.booking">Book on Booking.com</span><i data-icon="arrowUR"></i></a>
+        </div>
+        <p class="micro ld" style="--i:4" data-i18n="cta.note">Reservations are handled securely on Airbnb and Booking.com.</p>
+      </div>
+    </div>
+    <div class="scroll" aria-hidden="true"><span data-i18n="hero.scroll">Scroll</span></div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <header class="center" data-reveal>
+        <span class="eyebrow" data-i18n="nav.reviews">Reviews</span>
+        <h2 class="h2" data-i18n="rev.title">Real reviews from Booking and Airbnb</h2>
+        <p class="sub" data-i18n="rev.sub">Honest words from guests who have stayed at Dainty House.</p>
+      </header>
+      <div class="score-row" data-reveal>
+        <div class="scores">
+          <div class="score">
+            <div class="big" data-score>4.76</div>
+            <div class="meta">
+              <span class="src" data-i18n="rev.platform.airbnb">Airbnb</span>
+              <div class="stars" aria-hidden="true"><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i></div>
+              <div><span data-i18n="rev.outof">out of 5</span></div>
+              <small data-i18n="rev.based">{count} reviews on Airbnb</small>
+            </div>
+          </div>
+          <div class="score">
+            <div class="big" data-bscore>8.1</div>
+            <div class="meta">
+              <span class="src" data-i18n="rev.platform.booking">Booking.com</span>
+              <div><span data-i18n="rev.outof10">out of 10</span></div>
+              <small data-i18n="rev.based.booking">{bcount} reviews on Booking.com</small>
+            </div>
+          </div>
+        </div>
+        <div class="cats-wrap">
+          <span class="src" data-i18n="rev.cats">Airbnb ratings</span>
+          <div class="cats"><ul data-categories></ul></div>
+        </div>
+      </div>
+      <div class="rv-list" data-reviews data-reveal style="--d:100" tabindex="0" aria-label="Guest reviews"></div>
+      <div class="mentions" data-reveal>
+        <h3 data-i18n="rev.mentions">Guests mention most</h3>
+        <ul data-mentions></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <header class="center" data-reveal>
+        <span class="eyebrow" data-i18n="nav.gallery">Gallery</span>
+        <h2 class="h2" data-i18n="gal.title">Step inside</h2>
+        <p class="sub" data-i18n="gal.sub">Swipe, drag or use the arrows. Tap a photo to see it full screen.</p>
+      </header>
+    </div>
+    <div data-carousel data-reveal></div>
+  </section>
+
+  <!-- HOUSE -->
+  <section class="house" id="house">
+    <div class="wrap">
+      <div class="intro" data-reveal>
+        <span class="eyebrow" data-i18n="nav.house">The house</span>
+        <h2 class="h2" data-i18n="house.title">The house</h2>
+        <p class="lede" data-i18n="house.p1"></p>
+      </div>
+      <ul class="facts" data-reveal>
+        <li><i data-icon="users"></i><span data-i18n="fact.guests">2 guests</span></li>
+        <li><i data-icon="bed"></i><span data-i18n="fact.bedroom">1 bedroom</span></li>
+        <li><i data-icon="bed"></i><span data-i18n="fact.bed">1 double bed</span></li>
+        <li><i data-icon="bath"></i><span data-i18n="fact.bath">1 bathroom</span></li>
+        <li><i data-icon="sofa"></i><span data-i18n="fact.sofa">Sofa in the living room</span></li>
+        <li><i data-icon="door"></i><span data-i18n="fact.access">Entire home, private</span></li>
+      </ul>
+      <div class="house-grid">
+        <figure class="tall" data-reveal><img data-photo="11" src="assets/photos/sm/11.jpg" loading="lazy" alt="Double bed in the living area" width="900" height="1200"></figure>
+        <div class="txt" data-reveal style="--d:120">
+          <p data-i18n="house.p2"></p>
+          <p data-i18n="house.p3"></p>
+          <p class="quote" data-i18n="house.p4"></p>
+          <p class="rate layout" data-i18n="house.layout"></p>
+          <p class="rate" data-i18n="house.rate"></p>
+          <p class="rate" style="margin-top:.8rem" data-i18n="house.access"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="amen" id="amenities">
+    <div class="wrap">
+      <header class="center" data-reveal>
+        <span class="eyebrow" data-i18n="nav.amenities">Amenities</span>
+        <h2 class="h2" data-i18n="am.title">What the house offers</h2>
+        <p class="sub" data-i18n="am.sub">Everything you need for a comfortable stay.</p>
+      </header>
+      <div class="am-grid" data-amenities data-reveal style="--d:100"></div>
+    </div>
+  </section>
+
+  <!-- SPA -->
+  <section class="spa light">
+    <img class="bg" data-photo="06" src="assets/photos/06.jpg" loading="lazy" alt="Jacuzzi in the private courtyard with slate wall">
+    <div class="wrap">
+      <div class="in" data-reveal>
+        <span class="eyebrow" data-i18n="spa.kicker">Optional extra</span>
+        <h2 class="h2" data-i18n="spa.title">Jacuzzi &amp; SPA</h2>
+        <p data-i18n="spa.text"></p>
+        <div class="tags">
+          <span class="tag price"><i data-icon="jacuzzi"></i><span data-i18n="spa.price">€35 per day</span></span>
+          <span class="tag"><i data-icon="clock"></i><span data-i18n="spa.hours">Available 15:00–23:00</span></span>
+          <span class="tag"><i data-icon="clock"></i><span data-i18n="spa.advance">Request 5 hours ahead</span></span>
+        </div>
+        <small data-i18n="spa.note"></small>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="loc" id="location">
+    <div class="wrap">
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="nav.location">Location</span>
+        <h2 class="h2" data-i18n="loc.title">In the heart of Ovar</h2>
+        <p class="sub" data-i18n="loc.sub">Between the Atlantic and the Ria de Aveiro.</p>
+        <ul class="places">
+          <li><b data-i18n="loc.furadouro">Furadouro beach</b><span data-i18n="loc.furadouro.d"></span></li>
+          <li><b data-i18n="loc.ria">Ria de Aveiro</b><span data-i18n="loc.ria.d"></span></li>
+          <li><b data-i18n="loc.ribeira">Cais da Ribeira</b><span data-i18n="loc.ribeira.d"></span></li>
+          <li><b data-i18n="loc.carregal">Cais do Carregal</b><span data-i18n="loc.carregal.d"></span></li>
+        </ul>
+      </div>
+      <div data-reveal style="--d:120">
+        <div class="map"><iframe title="Dainty House on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps?q=Dainty+House+Rua+Grupo+Acad%C3%A9mico+Vareiro+147+Ovar+Portugal&amp;hl=en&amp;z=17&amp;output=embed"></iframe></div>
+        <p class="map-note"><a href="https://www.google.com/maps/search/?api=1&amp;query=Dainty+House+Rua+Grupo+Acad%C3%A9mico+Vareiro+147+Ovar+Portugal" target="_blank" rel="noopener" data-i18n="loc.open" style="font-weight:600">Open in Google Maps</a> · <span data-i18n="loc.note">Rua Grupo Académico Vareiro, Ovar</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section class="end light">
+    <div class="wrap" data-reveal>
+      <span class="eyebrow">Ovar · Portugal</span>
+      <h2 class="h2" data-i18n="end.title">Ready to stay in Ovar?</h2>
+      <p data-i18n="end.sub">Check dates and book directly on your preferred platform.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="https://www.airbnb.pt/rooms/888126764161156334" target="_blank" rel="noopener"><span data-i18n="cta.airbnb">Book on Airbnb</span><i data-icon="arrowUR"></i></a>
+        <a class="btn btn-ghost" href="https://www.booking.com/hotel/pt/dainty-house-ovar.pt-pt.html" target="_blank" rel="noopener"><span data-i18n="cta.booking">Book on Booking.com</span><i data-icon="arrowUR"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <a class="logo" href="#top">Dainty <b>House</b></a>
+    <div><p data-i18n="foot.reg">Local Accommodation registry (AL): {reg}</p><p data-i18n="foot.rights">© Dainty House · Ovar, Portugal</p></div>
+    <p style="max-width:32ch" data-i18n="foot.note"></p>
+    <div class="lang" role="group" aria-label="Language"><button type="button" data-lang-set="en">EN</button><button type="button" data-lang-set="pt">PT</button></div>
+    <a class="top" href="#top" data-i18n="nav.top">Back to top</a>
+  </div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
